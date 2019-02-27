@@ -5,7 +5,6 @@
 extern int gWidth, gHeight;
 void TW_CALL CallbackLoad(void *clientData);
 string loadPath();
-void beginLoad(string path);
 
 // Global static pointer used to ensure a single instance of the class.
 CUserInterface * CUserInterface::mInterface = NULL;
@@ -153,8 +152,7 @@ CUserInterface::CUserInterface()
 void TW_CALL CallbackLoad(void *clientData)
 {
 	string path = loadPath();
-	if (path != "")
-		beginLoad(path);
+
 }
 
 CUserInterface::~CUserInterface()
